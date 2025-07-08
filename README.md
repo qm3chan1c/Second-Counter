@@ -10,7 +10,7 @@ Second-Counter/
 │   ├── display.v  
 │   ├── clock_divider.v  
 │   ├── number_counter.v  
-│   └── display_map_7seg.v 
+│   └── display_map_7seg.v  
 ├── constraints/  
 │   └── Basys3_Master.xdc  
 └── README.md  
