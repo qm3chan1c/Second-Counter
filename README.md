@@ -10,19 +10,19 @@ Second-Counter/
 │   ├── display.v  
 │   ├── clock_divider.v  
 │   ├── number_counter.v  
-|   └── display_map_7seg.v 
+│   └── display_map_7seg.v 
 ├── constraints/  
 │   └── Basys3_Master.xdc  
 └── README.md  
 
 #   MODULE HIERARCHY  
 
-display (display.v)
+display (display.v)  
 ├── one_Hz : clock_divider (clock_divider.v)  
 └── count : number_counting (number_counter.v)  
     ├── ones : display_map_7seg (display_map_7seg.v)  
-    ├── tens : display_map_7seg (display_map_7seg.v)
-    ├── hundreds : display_map_7seg (display_map_7seg.v)
+    ├── tens : display_map_7seg (display_map_7seg.v)  
+    ├── hundreds : display_map_7seg (display_map_7seg.v)  
     └── thousands : display_map_7seg (display_map_7seg.v)  
     
 
