@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: --
+// Engineer: QJ
 // 
 // Create Date: 07/07/2025 12:59:04 PM
-// Design Name: 
+// Design Name: Display Map 7 Segment
 // Module Name: display_map_7seg
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
+// Project Name: Second-Counter
+// Target Devices: Basys 3
+// Tool Versions: Vivado 2024.2
+// Description: Maps numbers in binary to the required bit-vector for display on a 7-segment display
 // 
 // Dependencies: 
 // 
