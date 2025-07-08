@@ -22,7 +22,7 @@ display (display.v)
 │   ├── ones : display_map_7seg (display_map_7seg.v)  
 │   ├── tens : display_map_7seg (display_map_7seg.v)  
 │   ├── hundreds : display_map_7seg (display_map_7seg.v)  
-│   └── thousands : display_map_7seg (display_map_7seg.v) 
+│   └── thousands : display_map_7seg (display_map_7seg.v)   
 └── one_Hz : clock_divider (clock_divider.v)  
  
     
