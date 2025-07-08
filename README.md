@@ -7,22 +7,22 @@ Constraints file copied and modified from https://github.com/Digilent/digilent-x
 
 Second-Counter/  
 ├── sources/  
-│   ├── display.v  
-│   ├── clock_divider.v  
-│   ├── number_counter.v  
-│   └── display_map_7seg.v  
+│     ├── display.v  
+│     ├── clock_divider.v  
+│     ├── number_counter.v  
+│     └── display_map_7seg.v  
 ├── constraints/  
-│   └── Basys3_Master.xdc  
+│     └── Basys3_Master.xdc  
 └── README.md  
 
 #   MODULE HIERARCHY  
 
 display (display.v)  
 ├── count : number_counting (number_counter.v)  
-│   ├── ones : display_map_7seg (display_map_7seg.v)  
-│   ├── tens : display_map_7seg (display_map_7seg.v)  
-│   ├── hundreds : display_map_7seg (display_map_7seg.v)  
-│   └── thousands : display_map_7seg (display_map_7seg.v)   
+│     ├── ones : display_map_7seg (display_map_7seg.v)  
+│     ├── tens : display_map_7seg (display_map_7seg.v)  
+│     ├── hundreds : display_map_7seg (display_map_7seg.v)  
+│     └── thousands : display_map_7seg (display_map_7seg.v)   
 └── one_Hz : clock_divider (clock_divider.v)  
  
     
