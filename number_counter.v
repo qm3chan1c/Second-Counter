@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: --
+// Engineer: QJ
 // 
 // Create Date: 07/06/2025 08:45:51 PM
-// Design Name: 
+// Design Name: Number Counter
 // Module Name: number_counting
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
+// Project Name: Second-Counter
+// Target Devices: Basys 3
+// Tool Versions: Vivado 2024.2
+// Description: A BCD counter that increments by 1 every second
 // 
 // Dependencies: 
 // 
