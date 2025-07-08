@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: --
+// Engineer: QJ
 // 
 // Create Date: 07/04/2025 10:50:19 PM
-// Design Name: 
-// Module Name: counter
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
+// Design Name: Display
+// Module Name: display
+// Project Name: Second Counter
+// Target Devices: Basys 3
+// Tool Versions: Vivado 2024.2
+// Description: Displays the required digit on the in-built 7-segment display of the Basys 3 FPGA. The display has a refresh rate of 1KHz.
 // 
 // Dependencies: 
 // 
