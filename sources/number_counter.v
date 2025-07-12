@@ -1,17 +1,17 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: --
+// Engineer: QJ
 // 
 // Create Date: 07/06/2025 08:45:51 PM
-// Design Name: 
+// Design Name: Number Counter
 // Module Name: number_counting
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
+// Project Name: Second Counter
+// Target Devices: Basys 3
+// Tool Versions: Vivado 2024.2
+// Description: increments the number on screen by 1 every second
 // 
-// Dependencies: 
+// Dependencies: display_map_7seg.v
 // 
 // Revision:
 // Revision 0.01 - File Created
