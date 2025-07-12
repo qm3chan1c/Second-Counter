@@ -11,7 +11,7 @@
 // Tool Versions: Vivado 2024.2
 // Description: Displays the required digit on the in-built 7-segment display of the Basys 3 FPGA. The display has a refresh rate of 1KHz.
 // 
-// Dependencies: 
+// Dependencies: clock_divider.v, number_counter.v
 // 
 // Revision:
 // Revision 0.01 - File Created
