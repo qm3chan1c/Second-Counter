@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: --
-// Engineer: QJ
+// Company: 
+// Engineer: 
 // 
 // Create Date: 07/06/2025 08:45:51 PM
-// Design Name: Number Counter
+// Design Name: 
 // Module Name: number_counting
-// Project Name: Second-Counter
-// Target Devices: Basys 3
-// Tool Versions: Vivado 2024.2
-// Description: A BCD counter that increments by 1 every second
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
 // 
 // Dependencies: 
 // 
@@ -21,7 +21,8 @@
 
 
 module number_counting(
-    input divided_clk_in,
+    input enable_clk_in,
+    input clk_in,
     output wire [27:0] number_out
 //    output reg [3:0] active_anode_out
     );
@@ -50,44 +51,48 @@ module number_counting(
     
     
     
-    always @(posedge divided_clk_in) begin
-        
-        number_counter_signal <= number_counter_signal + 1;
-        
-        if (number_counter_signal[3:0] == 4'b1001) begin
-            number_counter_signal[3:0] <= 4'b0000;
-            number_counter_signal[7:4] <= number_counter_signal[7:4] + 1;
+    always @(posedge clk_in) begin
+        if (enable_clk_in) begin
+            number_counter_signal <= number_counter_signal + 1;
             
-            if (number_counter_signal[7:4] == 4'b1001) begin
-                number_counter_signal[11:8] <= number_counter_signal[11:8] + 1;
-                number_counter_signal[7:4] <= 4'b0000;
+            if (number_counter_signal[3:0] == 4'b1001) begin
+                number_counter_signal[3:0] <= 4'b0000;
+                number_counter_signal[7:4] <= number_counter_signal[7:4] + 1;
                 
-                if (number_counter_signal[11:8] == 4'b1001) begin
-                    number_counter_signal[15:12] <= number_counter_signal[15:12] + 1;
-                    number_counter_signal[11:8] <= 4'b0000;
+                if (number_counter_signal[7:4] == 4'b1001) begin
+                    number_counter_signal[11:8] <= number_counter_signal[11:8] + 1;
+                    number_counter_signal[7:4] <= 4'b0000;
                     
-                    if (number_counter_signal[15:12] == 4'b1001) begin
+                    if (number_counter_signal[11:8] == 4'b1001) begin
+                        number_counter_signal[15:12] <= number_counter_signal[15:12] + 1;
                         number_counter_signal[11:8] <= 4'b0000;
                         
+                        if (number_counter_signal[15:12] == 4'b1001) begin
+                            number_counter_signal[11:8] <= 4'b0000;
+                            
+                        end
                     end
+                    
                 end
                 
+            end else if (number_counter_signal[7:4] == 4'b1010) begin
+                number_counter_signal[7:4] <= 4'b0000;
+                number_counter_signal[11:8] <= number_counter_signal[11:8] + 1;
+                
+            end else if (number_counter_signal[11:8] == 4'b1010) begin
+                number_counter_signal[11:8] <= 4'b0000;
+                number_counter_signal[15:12] <= number_counter_signal[15:12] + 1;
+                
+                
+            end else begin
+                number_counter_signal <= {16{1'b0}};
+                number_counter_signal <= number_counter_signal + 1;
             end
-            
-        end else if (number_counter_signal[7:4] == 4'b1010) begin
-            number_counter_signal[7:4] <= 4'b0000;
-            number_counter_signal[11:8] <= number_counter_signal[11:8] + 1;
-            
-        end else if (number_counter_signal[11:8] == 4'b1010) begin
-            number_counter_signal[11:8] <= 4'b0000;
-            number_counter_signal[15:12] <= number_counter_signal[15:12] + 1;
             
             
         end else begin
-            number_counter_signal <= {16{1'b0}};
-            number_counter_signal <= number_counter_signal + 1;
+            number_counter_signal <= number_counter_signal;
         end
-        
-        
     end
+
 endmodule
