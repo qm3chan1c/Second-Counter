@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: --
+// Engineer: QJ
 // 
 // Create Date: 07/06/2025 08:56:51 PM
-// Design Name: 
+// Design Name: Clock Divider
 // Module Name: clock_divider
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
+// Project Name: Second Counter
+// Target Devices: Basys 3
+// Tool Versions: Vivado 2024.2
+// Description: generates a clock enable signal from the onboard clock (100MHz) that is active high for 1 clock cycle at a frequency of 1Hz
 // 
 // Dependencies: 
 // 
